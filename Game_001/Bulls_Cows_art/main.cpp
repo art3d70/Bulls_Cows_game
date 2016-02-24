@@ -1,11 +1,10 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
 
 void PrintIntro();
 void PlayGame();
-string GetGuess();
+std::string GetGuess();
 bool AskToPlayAgain();
 
 // the entry point of  the app
@@ -25,8 +24,8 @@ int main() {
 void PrintIntro() {
 
 	constexpr int WORD_LENGTH = 9;
-	cout << "Bienvenido al Juego" << endl;
-	cout << "Adivina la palabra de " << WORD_LENGTH << " letras" << endl;
+	std::cout << "Bienvenido al Juego" << std::endl;
+	std::cout << "Adivina la palabra de " << WORD_LENGTH << " letras" << std::endl;
 	return;
 }
 
@@ -34,24 +33,24 @@ void PlayGame() {
 
 	constexpr int NUMBER_OF_TURNS = 5;
 	for (int count = 1; count <= NUMBER_OF_TURNS; count++) {
-		string Guess = GetGuess();
-		cout << "Tu palabra fue: " << Guess << endl;
-		cout << endl;
+		std::string Guess = GetGuess();
+		std::cout << "Tu palabra fue: " << Guess << std::endl;
+		std::cout << std::endl;
 	}
 }
 
-string GetGuess() {
+std::string GetGuess() {
 
-	cout << "Tu palabra: ";
-	string Guess = "";
-	getline(cin, Guess);
+	std::cout << "Tu palabra: ";
+	std::string Guess = "";
+	std::getline(std::cin, Guess);
 	return Guess;
 }
 
 bool AskToPlayAgain() {
 
-	cout << "Quieres jugar de nuevo? (s/n): ";
-	string Response;
-	getline(cin, Response);
+	std::cout << "Quieres jugar de nuevo? (s/n): ";
+	std::string Response;
+	std::getline(std::cin, Response);
 	return (Response[0] == 's') || (Response[0] == 'S');
 }

@@ -4,7 +4,7 @@
 class FBullCowGame {
 public:
 
-	void reset(); //TODO make a more rich value
+	void Reset(); //TODO make a more rich value
 	int GetMaxTries();
 	int GetCurrentTry();
 	bool IsGameWon();
