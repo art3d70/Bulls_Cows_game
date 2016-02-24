@@ -12,6 +12,7 @@ bool AskToPlayAgain();
 int main() {
 
 	bool bPlayAgain = false;
+
 	do {
 		PrintIntro();
 		PlayGame();
