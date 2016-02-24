@@ -2,11 +2,11 @@
 
 void FBullCowGame::Reset(){}
 
-int FBullCowGame::GetMaxTries(){ return MyMaxTries; }
+int FBullCowGame::GetMaxTries() const { return MyMaxTries; }
 
-int FBullCowGame::GetCurrentTry(){ return MyCurrentTry; }
+int FBullCowGame::GetCurrentTry()const { return MyCurrentTry; }
 
-bool FBullCowGame::IsGameWon(){	return false; }
+bool FBullCowGame::IsGameWon() const {	return false; }
 
 bool FBullCowGame::CheckGuesValidity(std::string)
 {
