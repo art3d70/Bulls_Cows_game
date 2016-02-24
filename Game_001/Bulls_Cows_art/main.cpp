@@ -8,6 +8,8 @@ void PlayGame();
 std::string GetGuess();
 bool AskToPlayAgain();
 
+FBullCowGame BCGame; // instanciamos la clase
+
 // the entry point of  the app
 int main() {
 
@@ -32,10 +34,10 @@ void PrintIntro() {
 
 void PlayGame() {
 
-	FBullCowGame BCGame; // instanciamos la clase
-
-	constexpr int NUMBER_OF_TURNS = 5;
-	for (int count = 1; count <= NUMBER_OF_TURNS; count++) {
+	
+	int Maxtries = BCGame.GetMaxTries();
+		
+	for (int count = 1; count <= Maxtries; count++) {
 		std::string Guess = GetGuess();
 		std::cout << "Tu palabra fue: " << Guess << std::endl;
 		std::cout << std::endl;
@@ -44,7 +46,9 @@ void PlayGame() {
 
 std::string GetGuess() {
 
-	std::cout << "Tu palabra: ";
+	int CurrentTry = BCGame.GetCurrentTry();
+
+	std::cout << "Intento "<< CurrentTry << ". Tu palabra: ";
 	std::string Guess = "";
 	std::getline(std::cin, Guess);
 	return Guess;
