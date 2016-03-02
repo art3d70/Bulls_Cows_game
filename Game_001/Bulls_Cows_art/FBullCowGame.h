@@ -3,6 +3,7 @@
 
 class FBullCowGame {
 public:
+	FBullCowGame(); //Construct
 
 	int GetMaxTries() const;
 	int GetCurrentTry() const;
