@@ -36,12 +36,19 @@ void PlayGame() {
 
 	BCGame.Reset();
 	int Maxtries = BCGame.GetMaxTries();
-		
+	
+	// TODO change from FOR to WHILE loop once we are validating try
 	for (int count = 1; count <= Maxtries; count++) {
-		std::string Guess = GetGuess();
+		std::string Guess = GetGuess(); //TODO make loop cheking valid guess
+
+		//submit valid guess to the game
+		//print number of bulls and cows
+
 		std::cout << "Tu palabra fue: " << Guess << std::endl;
 		std::cout << std::endl;
 	}
+	//TODO add a game summary
+
 }
 
 std::string GetGuess() {
